@@ -27,7 +27,7 @@ cv2.imwrite(output1, img)
 Given multiple perspective images and infromation(FOV, theta, phi, height, width).  
 If the equirectangle image is overlapping, the pixel calculate the average in multiple image.
 
-<center><img width="200" height="200" src="example/perspective/perspective_1.png"> <img width="200" height="200" src="example/perspective/perspective_2.png"></center>
+<img width="200" height="200" src="example/perspective/perspective_1.png"> <img width="200" height="200" src="example/perspective/perspective_2.png">  
 Setting the image information (FOV, theta, phi) in the code <strong>pers2equir.py</strong>.
 
 ```
@@ -45,8 +45,9 @@ img = equ.GetEquirec(height,width)
 Put image in `./panorama`.   
 <center><img src="panorama/world_map.jpeg"></center>
 
-**Run:**  ```python panorama2cube.py```.
-<center><img width="150" height="150" src="output/00/front.png"> <img width="150" height="150" src="output/00/right.png"> <img width="150" height="150" src="output/00/back.png"><img width="150" height="150" src="output/00/left.png"> <img width="150" height="150" src="output/00/top.png"> <img width="150" height="150" src="output/00/bottom.png"></center>
+**Run:**  ```python panorama2cube.py```.   
+<img width="150" height="150" src="output/00/front.png"> <img width="150" height="150" src="output/00/right.png"> <img width="150" height="150" src="output/00/back.png">  
+<img width="150" height="150" src="output/00/left.png"> <img width="150" height="150" src="output/00/top.png"> <img width="150" height="150" src="output/00/bottom.png">
 
 ## Cube to Panorama
 Put image in `./in_path`.  
