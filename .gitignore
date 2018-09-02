@@ -17,3 +17,4 @@ __pycache__/
 /space
 vrProjectorCmd
 vrProjectorWrapper.py
+./lib/old_Perspec2Equirec.py
