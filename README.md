@@ -1,4 +1,4 @@
-# Perspective2Equirectangular
+# Perspective and Equirectangular
 ## Introduction
 <strong> Perspective2Equirectangular </strong> is a python code to help you transfer image between equirectangular and perspective. Four transfer is in the list.
 
