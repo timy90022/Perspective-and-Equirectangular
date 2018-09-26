@@ -34,6 +34,7 @@ def pers2equir():
     
     
     img = equ.GetEquirec(height,width)  
+    print(img.shape)
     cv2.imwrite(output_dir + '/output.png', img)
 
 

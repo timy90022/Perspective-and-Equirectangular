@@ -32,12 +32,15 @@ class Perspective:
 
         y_axis = np.array([0.0, 1.0, 0.0], np.float32)
         z_axis = np.array([0.0, 0.0, 1.0], np.float32)
-        [R1, _] = cv2.Rodrigues(z_axis * np.radians(-self.THETA))
-        [R2, _] = cv2.Rodrigues(np.dot(R1, y_axis) * np.radians(self.PHI))
+        [R1, _] = cv2.Rodrigues(z_axis * np.radians(self.THETA))
+        [R2, _] = cv2.Rodrigues(np.dot(R1, y_axis) * np.radians(-self.PHI))
+
+        R1 = np.linalg.inv(R1)
+        R2 = np.linalg.inv(R2)
 
         xyz = xyz.reshape([height * width, 3]).T
-        xyz = np.dot(R1, xyz)
-        xyz = np.dot(R2, xyz).T
+        xyz = np.dot(R2, xyz)
+        xyz = np.dot(R1, xyz).T
 
         xyz = xyz.reshape([height , width, 3])
         inverse_mask = np.where(xyz[:,:,0]>0,1,0)
